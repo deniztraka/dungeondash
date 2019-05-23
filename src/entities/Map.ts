@@ -102,6 +102,10 @@ export default class Map {
     }
     wallLayer.setCollisionBetween(0, 256);
     this.tilemap.convertLayerToStatic(groundLayer);
+    //fix for layerIndex
+    //after converting previous Layer, wallLayer Index remains same as 1 but actually it is not anymore. It should be changed to 0.
+    // be aware if any layer is added that index may required to be changed.
+    wallLayer.layerIndex = 0;
     this.wallLayer = this.tilemap.convertLayerToStatic(wallLayer);
   }
 

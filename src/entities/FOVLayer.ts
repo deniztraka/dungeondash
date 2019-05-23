@@ -1,6 +1,6 @@
 import Graphics from "../assets/Graphics";
 import Map from "../entities/Map";
-import Mrpas from "mrpas";
+import { Mrpas } from "mrpas";
 import Phaser from "phaser";
 
 const radius = 7;
