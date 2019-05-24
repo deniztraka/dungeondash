@@ -1,5 +1,6 @@
 import Tile, { TileType } from "../entities/Tile";
-import DungeonFactory from "dungeon-factory";
+//import DungeonFactory from "dungeon-factory";
+import Dungeoneer from "dungeoneer";
 import Graphics from "../assets/Graphics";
 
 interface DungeonFactoryOutput {
@@ -18,7 +19,9 @@ export default class Map {
   public readonly startingY: number;
 
   constructor(width: number, height: number, scene: Phaser.Scene) {
-    const dungeon = DungeonFactory.generate({
+    
+    //debugger;
+    const dungeon = Dungeoneer.build({
       width: width,
       height: height
     }) as DungeonFactoryOutput;
